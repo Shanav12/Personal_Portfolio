@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Personal Portfolio Website</title>
+        <link rel="stylesheet" href="static/css/style.css">
+        <script src="https://kit.fontawesome.com/a4d94130f3.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="static/images/logo.png" class="logo">
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a> </li>
+                        <li><a href="#about">About</a> </li>
+                        <li><a href="#portfolio">Portfolio</a> </li>
+                        <li><a href="#contact">Contact</a> </li>
+                        <i class="fa-solid fa-x" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <div class="header-text">
+                    <h1>Aspiring Software Engineer &<br>
+                        Data Scientist</h1>
+                    <p>Hi, I'm Shanav Bagga! Scroll through my portfolio <br>
+                        to learn more about me.</p>
+                    <img src="static/images/background.png" class="background">
+                </div>
+            </div>
+        </div>
+        <!-- ----------about---------- -->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="static/images/user.png">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me<br></h1>
+                        <p>
+                            I'm currently a Sophomore at UIUC studying Statistics with a Minor in Computer Science. I
+                            desire to apply the knowledge I've gathered throughout my coursework and projects in
+                            future internships in data science and software engineering. I possess specifically strong 
+                            skills in Natural Language Processing and Quantitative Trading.<br><br>
+                        </p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links " onclick="opentab('education')">Education</p>
+                            <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="experience">
+                            <ul>
+                                <li><span>August 2023 - Present</span><br>CS 128 CA<br><br>
+                                    - Held weekly office hours to assist students in understanding key C++ concepts<br>
+                                    - Guided students through writing efficient test cases<br>
+                                    - Ran weekly lab sections<br><br>
+                                    </li>
+                                <li><span>May 2023 - August 2023</span><br>AI Camp Data Science Intern<br><br>
+                                    - Implemented a Chatbot in Python through Streamlit that allows users to upload files and query them<br>
+                                    - Utilized a variety of combinations of Llama Index, Langchain, Pinecone, and OpenAI’s API to create multiple query engines<br>
+                                    - Split the inputted file into a doubly linked list of nodes through Llama Index <br>
+                                    - Created an automated test suite on the SQUAD dataset. Calculated the median score across 1000 queries to be 0.895<br>
+                                    - Leveraged Llama Index’s Response Evaluator to determine whether the response was strictly using the context given<br><br>
+                                    </li>
+                                <li><span>January 2023 - May 2023</span><br>CS 124 CA<br><br>
+                                    - Spent several hours weekly teaching introductory Java programming concepts to students<br>
+                                    - Interacted with students through course help site meetings and forum discussions<br><br>
+                                    </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education"> 
+                            <ul>
+                                <li><span>August 2022 - Present</span><br><br>
+                                UIUC | Bachelor's of Science in Statistics | Computer Science Minor<br><br>
+                                Courses Taken:<br><br>
+                                 - CS 233: Computer Architecture<br><br>
+                                 - CS 225: Data Structures & Algorithms<br><br>
+                                 - STAT 410: Statistics & Probability II<br><br>
+                                 - STAT 400: Statistics & Probability I<br><br>
+                                 - CS 128: Introduction to Computer Science II<br><br>
+                                 - CS 124: Introduction to Computer Science I<br><br>
+                                 - STAT 107: Data Science Discovery<br>
+                            </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="skills">
+                            <ul>
+                                <li><span>Languages:</span><br><br>
+                                    C++, Python, Java, Rust, SQL, R, HTML, Javascript, CSS <br><br>
+                                    
+                                </li>
+                                <li><span>Technologies:</span><br><br>
+                                    Github, Flask, Hugging Face, Docker, AWS, React, Tensorflow <br><br>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- ----- portfolio ----- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Projects<br></h1>
+        <div class="project-list">
+            <div class="project">
+                <img src="static/images/lyrics.png">
+                <div class="layer">
+                    <h3>AI Lyric Generator</h3>
+                    <p>Here's SwiftGen, a website that allows users to randomly generate AI lyrics in the style of Taylor Swift. 
+                        I believe this is a great way to inspire others to gain interest for the field!</p>
+                        <a href="https://github.com/Shanav12/TaylorSwiftLyricGenerator"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="static/images/sports.png">
+                <div class="layer">
+                    <h3>Sports CV Model</h3>
+                    <p>Implemented a computer vision classification model in Python that outputs the probability 
+                        of which type of sports ball an inputted image it could be.</p>
+                        <a href="https://github.com/Shanav12/SportsBallClassificationCV"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="static/images/stock.png">
+                <div class="layer">
+                    <h3>Stock Trading Model</h3>
+                    <p>Implemented a deep learning trading model using multiple LSTM layers in Keras and 
+                        stock data through Alpaca’s API.
+                    </p>
+                        <a href="https://github.com/Shanav12/Alpaca_Trading_Model"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="https://github.com/Shanav12" class="btn">See More!</a>
+    </div>
+</div>
+<!--- --------- contact ---------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-regular fa-paper-plane"></i> svbagga2@illinois.edu</p>
+                <p><i class="fa-solid fa-mobile-screen-button"></i> 224-227-9296</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/shanav-bagga/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://twitter.com/shanav_bagga12"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/shanav.bagga15/"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+                <a href="static/images/Shanav_Bagga-Resume.pdf" download class="btn btn2">View My Resume!</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright @ Shanav Bagga.</p>
+    </div>
+</div>
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+
+        <script>
+            var sidemenu = document.getElementById("sidemenu");
+
+            function openmenu() {
+                sidemenu.style.right = "0";
+            }
+
+            function closemenu() {
+                sidemenu.style.right = "-200px";
+            }
+        </script>
+
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxiS_ePwVMX3olg1QHSqb_ryP5AcPUWwt5wgWI-hK2Oo3XX7ePSNifltQVJh1AKoqC17Q/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg");
+        
+            form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML = "Sent Successfully!"
+                    setTimeout(function() {
+                        msg.innerHTML = ""
+                    }, 6000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+            })
+        </script>
+    </body>
+</html>
