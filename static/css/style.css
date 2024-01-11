@@ -454,6 +454,11 @@ nav .fa-solid{
     .copyright{
         font-size: 14px;
     }
+    .btn.btn2{
+        display: inline-block;
+        background: #ff004f;
+        top: 100px;
+    }
 }
 
 #msg{
